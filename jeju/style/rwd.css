@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+@import url('./webfont.css');
+
+* { box-sizing: border-box;}
+body, h1, h2, h3, p, ul, figure { margin: 0; padding: 0;}
+ul { list-style: none; }
+a { text-decoration: none; }
+address { font-style: normal;}
+.hidden { overflow: hidden; 
+    position: absolute; 
+    width: 1px; 
+    height: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: 8px auto;
+    font-weight: 700;
+    font-family: 'ChosunGs';
+    font-size: normal;
+    border: 1px solid #e7e7e7;
+    background: linear-gradient(180deg, #b9f2ff 200px, #fff ) repeat-x;
+}
+
+#header { 
+    width: 960px;
+    height: 280px;
+    background: url(../jeju.img/bg_header.png) no-repeat center / cover ;
+}
+
+h1 {
+    padding: 40px 0 0 20px;
+    font-size: 70px;
+    color: white;
+    text-shadow: black 3px 3px;
+}
+
+#gnb { 
+    width: 960px;
+     }
+#gnb ul { 
+    display: flex;
+    height: 100%;
+}
+#gnb ul li { 
+   
+    width: 25%; 
+    background: #28177f;
+}
+#gnb ul li a {
+    width: 100%; 
+    text-align: center;
+    line-height: 60px;
+    display: block;
+    color: #fff; 
+    font-family: 'pretendard';
+    font-weight: 400;
+    transition : 0.4s
+}
+#gnb ul li a:hover { background: #fff; color:#28177f }
+
+main { 
+    width: 738px;
+    background: #fff;
+}
+
+#content {
+    padding: 30px 30px 0 10px;
+}
+#content h2, h3 { 
+    margin-bottom: 20px;
+    font-family: 'Pretendard';
+}
+#content p { 
+    font-family: 'Pretendard';
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+#house {
+    width: 220px;
+    background: #ffeaaa;
+}
+#house figure { 
+    margin: 10px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#house figure img { 
+    border: 1px solid #838282;
+    margin-top: 10px;}
+
+#footer { 
+    width: 100%;
+    padding: 15px 0;
+    background: #133522;
+    color: white;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+/* 태블릿 기준 or 600-1023 */
+@media screen and ( max-width: 1023px ) { 
+    body { width: 100%; }
+    main { width: 100%; }
+    #house { width: 100%; }
+    #house figure { 
+        flex-direction: row; 
+        justify-content: space-evenly;
+        /* column-gap: 10px; */
+    }
+    #house figure img { width: 25%; }
+}
+
+/* 599 이하 모바일 */
+@media screen and ( max-width:599px ) { 
+    body { 
+        margin: 0; 
+        border: 0;
+        background: none;}
+    #header { 
+        height: 75px;
+        background: #061f1f;
+    }
+    #header h1 { font-size: 2rem;
+                 text-align: center;
+                 padding: 0;
+                 line-height: 75px;
+                 }
+    #gnb {  }
+    #gnb ul { display: block; }
+    #gnb ul li { 
+        width: 90%; 
+        background: #ffffff; 
+        border: 1px solid #000;
+        border-radius: 50px;
+        margin: 10px auto;
+    }
+    #gnb ul li a { color:#061f1f; transition: 0.4;}
+    #gnb ul li a:hover { 
+        border-radius: 50px;
+        background: #061f1f; color: white;}
+
+    #house figure { flex-direction: column;}
+    #house figure img { width: 80%; }
+}
+
+
