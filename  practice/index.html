@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="stylesheet" href="./style/common.css">
+</head>
+<body>
+    <header id="header">
+        <h1>로고</h1>
+        <nav id="gnb">
+            <h2 class="hidden">메뉴바</h2>
+            
+            <ul>
+                <li><a href="#box1">메뉴</a></li>
+                <li><a href="#box2">메뉴</a></li>
+                <li><a href="#box3">메뉴</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="viewMenu">메뉴펼침</a>
+        
+    </header>
+
+    <main>
+        <section id="box1">box1</section>
+        <section id="box2">box2</section>
+        <section id="box3">box3</section>
+    </main>
+
+    <footer id="footer">
+        <h2 class="hidden">푸터</h2>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('#gnb');
+        const viewMenu = document.querySelector('.viewMenu');
+        console.log(nav, viewMenu);
+
+        viewMenu.addEventListener('click', ()=> {
+            nav.style.right = `0px`;
+        })
+        nav.addEventListener('mouseleave', () => {
+            nav.style.right = `-200px`
+        })
+    </script>
+</body>
+</html>
